@@ -7,27 +7,100 @@
 .logo {
     color: #1877f2;
     font-size: 60px;
-    grid-column: 2;
-    grid-row: 2;
+    grid-column: 2/3; 
+    grid-row: 3;
+    margin-left: -170px;
+    margin-top: -100px;
+ 
 
     
 }
 
 .informacion {
     display: grid;
+    grid-row: 2;
+    background-color: white;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
+    grid-template-rows: 100px 100px 100px;
     border: 1px solid #ccc;
-    height: 600px;
-    padding: 100px;
+    padding: 130px;
+
+
+
     
 }
 
 .descripcion {
     color: black;
-    font-size: Arial;
-    font-size: 25px;
+    font-size: arial;
+    font-size: 35px;
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 4;
+    margin-left: -170px;
+    margin-top: -100px;
+    max-width: 500px;
+    width: 90%;
+   
 
 }
+
+.login {
+    grid-column: 3;
+    grid-row: 2 / 6;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px 20px 30px 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 350px;
+    height: auto;
+    margin-left: -180px;
+    margin-top: -50px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.formulario input {
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+}
+
+
+.btn-login {
+    background-color: #1877f2;
+    color: white;
+    font-size: 18px;
+    padding: 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.link-olvido {
+    text-align: center;
+    color: #1877f2;
+    text-decoration: none; 
+    font-size: 14px;
+}
+
+.formulario hr {
+    margin: 10px 0;
+}
+
+.btn-crear-cuenta {
+    background-color: #42b72a;
+    color: white;
+    font-size: 17px;
+    padding: 13px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
