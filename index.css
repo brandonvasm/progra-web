@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.logo {
+    color: #1877f2;
+    font-size: 60px;
+    grid-column: 2;
+    grid-row: 2;
+
+    
+}
+
+.informacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    border: 1px solid #ccc;
+    height: 600px;
+    padding: 100px;
+    
+}
+
+.descripcion {
+    color: black;
+    font-size: Arial;
+    font-size: 25px;
+    grid-column: 2;
+    grid-row: 3;
+
+}
