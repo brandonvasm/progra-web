@@ -9,8 +9,7 @@
     font-size: 60px;
     grid-column: 2/3; 
     grid-row: 3;
-    margin-left: -170px;
-    margin-top: -100px;
+    transform: translate(-170px, -100px);
  
 
     
@@ -19,7 +18,7 @@
 .informacion {
     display: grid;
     grid-row: 2;
-    background-color: white;
+    background-color: rgba(227, 248, 244, 0.756);
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px 100px;
     border: 1px solid #ccc;
@@ -33,11 +32,10 @@
 .descripcion {
     color: black;
     font-size: arial;
-    font-size: 35px;
+    font-size: 30px;
     grid-column: 2;
     grid-row: 4;
-    margin-left: -170px;
-    margin-top: -100px;
+    transform: translate(-170px, -100px);
     max-width: 500px;
     width: 90%;
    
@@ -102,5 +100,16 @@
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.texto-final {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    grid-column: 2;
+    grid-row: 7/9;
+    margin-right: -600px;
+   
 }
 
