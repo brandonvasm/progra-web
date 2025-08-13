@@ -1,3 +1,10 @@
+name: Deploy tarea-03
+
+on:
+  push:
+    branches:
+      - tarea-03
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
