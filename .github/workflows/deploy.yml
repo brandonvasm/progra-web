@@ -43,5 +43,5 @@ jobs:
                 "Quantity": 1,
                 "Items": ["/*"]
               },
-              "CallerReference": "'$(date +%s)'"
+              "CallerReference": "'"$(date +%s)"'"
             }'
