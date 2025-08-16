@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect, useState } from 'react';
+import PokemonCard from './components/pokemoncard';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [pokemons, setPokemons] = useState([]);
+
+  useEffect(() => {
+    async function fetchPokemons() {
+      const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20');
+      const data = await res.json();
+      const pokemonData = await Promise.all(
+        data.results.map(async (pokemon) => {
+          const res = await fetch(pokemon.url);
+          const details = await res.json();
+          return {
+            name: details.name,
+            image: details.sprites.front_default,
+            weight: details.weight,
+            height: details.height,
+            types: details.types.map(t => t.type.name),
+            abilities: details.abilities.map(a => a.ability.name)
+          };
+        })
+      );
+      setPokemons(pokemonData);
+    }
+    fetchPokemons();
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <h1>Pokémon Gallery</h1>
+      <div className="grid-container">
+        {pokemons.map(p => (
+          <PokemonCard key={p.name} {...p} />
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
