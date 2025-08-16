@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     async function fetchPokemons() {
-      const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20');
+      const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=40');
       const data = await res.json();
       const pokemonData = await Promise.all(
         data.results.map(async (pokemon) => {
@@ -16,9 +16,6 @@ function App() {
           return {
             name: details.name,
             image: details.sprites.front_default,
-            weight: details.weight,
-            height: details.height,
-            types: details.types.map(t => t.type.name),
             abilities: details.abilities.map(a => a.ability.name)
           };
         })
