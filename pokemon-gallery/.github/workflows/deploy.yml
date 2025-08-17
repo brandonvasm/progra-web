@@ -3,7 +3,7 @@ name: Deploy React App to AWS
 on:
   push:
     branches:
-      - assessment-1   
+      - assessment-1
 
 env:
   SOURCE_DIR: './dist'   
