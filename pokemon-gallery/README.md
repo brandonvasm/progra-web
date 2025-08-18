@@ -1,12 +1,41 @@
-# React + Vite
+# Pokémon Gallery - Assessment 1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web que muestra una galería de tarjetas con información de Pokémon obtenida dinámicamente desde la PokeAPI. La aplicación está desplegada en un CDN de AWS y el pipeline de GitHub Actions automatiza el build y despliegue.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 1. Integración Doppler con GitHub
+Captura de la pestaña **Config Syncs** en Doppler mostrando la integración con este repositorio:
 
-## Expanding the ESLint configuration
+![Doppler Config Syncs](screenshots/doppler-config-syncs.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 2. Variables de Doppler
+Captura de las variables configuradas en Doppler (ocultando valores sensibles):
+
+![Variables Doppler](screenshots/doppler-variables.png)
+
+---
+
+## 3. Secretos en GitHub
+Captura de los secretos 
+
+![Secrets GitHub](screenshots/github-secrets.png)
+
+---
+
+## 4. Captura de la aplicación
+
+
+![Pokémon Gallery](screenshots/pokemon-gallery.png)
+
+---
+
+## 5. URL pública del CDN
+La aplicación puede ser accedida desde la siguiente URL:
+
+[Acceder a Pokémon Gallery](https://d2usrrye4gyuns.cloudfront.net)
+
+
+
