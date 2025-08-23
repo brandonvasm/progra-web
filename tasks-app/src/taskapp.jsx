@@ -48,7 +48,7 @@ export default function TasksApp() {
 
   return (
     <div>
-      <h1>Tasks App</h1>
+      <h1>Tasks</h1>
       <TaskFilter filter={filter} setFilter={setFilter} />
 
 
