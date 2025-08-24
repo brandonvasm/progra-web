@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import TaskList from './components/tasklist';
 import TaskFilter from './components/taskfilter';
 
+
 export default function TasksApp() {
   const [tasks, setTasks] = useState(() => {
     const saved = localStorage.getItem('tasks');
@@ -47,7 +48,18 @@ export default function TasksApp() {
   });
 
   return (
-    <div>
+    <div
+      style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      minHeight: '100vh', 
+      gap: '20px', 
+      backgroundColor: 'white', 
+      padding: '20px'
+    }}
+    >
       <h1>Tasks</h1>
       <TaskFilter filter={filter} setFilter={setFilter} />
 
