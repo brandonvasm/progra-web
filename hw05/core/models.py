@@ -18,6 +18,14 @@ class Order(models.Model):
 class OrderDetail(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name="items")
     quantity = models.PositiveIntegerField(default=1)
+    
 
     def __str__(self):
         return f"Order Detail {self.id} - Order {self.order.id}"
+
+class Product(models.Model):
+    name = models.CharField(max_length=120)
+    price = models.DecimalField(max_digits=8, decimal_places=2)
+
+    def __str__(self):
+        return self.name
