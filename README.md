@@ -1,17 +1,22 @@
-# HW-05 Django Migrations
+# Instrucciones para ejecutar la aplicación
 
-## Diagramas de Base de Datos
 
-Diagrama de base de datos, desde el primer modelo hasta el modelo final
+## 1. Construir y levantar los contenedores
+docker-compose up --build
 
-### Paso 1 - Customer
-![diagrama1](docs/Fase1.png)
+Esto hará que:
+- Se construya la imagen de Docker de Django.
+- Se levanten los contenedores de Django y PostgreSQL.
+- Se ejecuten automáticamente las migraciones de la base de datos.
 
-### Paso 2 - + Order
-![diagrama2](docs/Fase2.png)
+## 2. Crear superusuario (opcional)
+docker-compose exec web python manage.py createsuperuser
 
-### Paso 3 - + OrderDetail
-![diagrama3](docs/Fase3.png)
+Siga las instrucciones para usuario, correo y contraseña.
 
-### Paso 4 - + Product
-![diagrama4](docs/Fase4.png)
+## 3. Acceder a la aplicación
+- Django: http://localhost:8000  
+- Panel de administración: http://localhost:8000/admin
+
+## 4. Detener los contenedores
+docker-compose down
