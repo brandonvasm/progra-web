@@ -1,5 +1,7 @@
 # Instrucciones para ejecutar la aplicación
-
+git clone <URL_DEL_REPOSITORIO>
+cd <NOMBRE_DEL_REPOSITORIO>
+git checkout <NOMBRE_DE_LA_RAMA>
 
 ## 1. Construir y levantar los contenedores
 docker-compose up --build
@@ -20,3 +22,5 @@ Siga las instrucciones para usuario, correo y contraseña.
 
 ## 4. Detener los contenedores
 docker-compose down
+
+
