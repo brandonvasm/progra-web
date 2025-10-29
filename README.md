@@ -1,7 +1,7 @@
 ## Resultados del escaneo SonarQube
 
 ### Frontend
-![Frontend scan](docs/Frontend.png)
+![Frontend scan](docs/Frontend.jpeg)
 
 
 ### Backend
